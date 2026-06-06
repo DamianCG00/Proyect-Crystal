@@ -49,3 +49,40 @@ Finalmente, la elección de CustomTkinter permite cumplir con la restricción es
 **⚠️ Lo que sacrifico o asumo:**
 - **Limitación técnica:** Elevado consumo de recursos de hardware en el sistema host. La ejecución simultánea de un Honeypot de red, un monitor de integridad de archivos y un asistente de voz bidireccional exige el uso constante de hilos secundarios (`Threading`) en segundo plano, lo que impactará de forma directa en el uso de memoria RAM y ciclos de CPU.
 - **Deuda o riesgo:** Riesgo operativo ante "Falsos Positivos". Si los criterios de detección en los archivos logs JSON no se calibran con extrema precisión, el componente Paladin podría interpretar tráfico de red legítimo o modificaciones automatizadas del sistema operativo como ataques críticos, inhabilitando puertos o servicios esenciales en el Firewall de Windows por error.
+
+
+## Vistas Arquitectonicas
+### Vista Logica
+<img width="1058" height="266" alt="image" src="https://github.com/user-attachments/assets/f78ad611-fd3b-41ac-9916-4a28b1994f7e" />
+
+
+---
+
+### Vista de desarrollo
+<img width="1197" height="602" alt="image" src="https://github.com/user-attachments/assets/3adbe38b-4b95-43ba-a3c8-98197d0fe292" />
+
+
+---
+
+### Vista de Procesos
+<img width="1075" height="359" alt="image" src="https://github.com/user-attachments/assets/bc8ac373-20b4-416c-a923-5ace3904c8d7" />
+
+---
+
+
+### Vista de Despliegue
+
+<img width="1194" height="602" alt="image" src="https://github.com/user-attachments/assets/a10df8cd-573c-4047-a79c-8e5c5642a084" />
+
+---
+
+### DIagrama
+
+<img width="5202" height="6982" alt="Untitled diagram-2026-06-06-055213" src="https://github.com/user-attachments/assets/c59d1aaa-34ef-478a-b883-959441dce5bc" />
+
+
+---
+
+
+## Declaración de IA
+En esta actividad logré poderver como es que se supone que debo hacer este proyecto que tanto deseo realizar, la use para estructural y generar los diagramas con base a mis notas y vision, esto con la finalidad de poder comprender como es que se debe hacer, use GEmmini y Mermaid
