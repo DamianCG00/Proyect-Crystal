@@ -4,7 +4,7 @@
 |--------|-------|
 | Autor  | Marco Damián |
 | Fecha  | 15/05/2026 |
-| Estado | `A la espera` |
+| Estado | `Aprobada` |
 
 ---
 
@@ -85,4 +85,4 @@ Finalmente, la elección de CustomTkinter permite cumplir con la restricción es
 
 
 ## Declaración de IA
-En esta actividad logré poderver como es que se supone que debo hacer este proyecto que tanto deseo realizar, la use para estructural y generar los diagramas con base a mis notas y vision, esto con la finalidad de poder comprender como es que se debe hacer, use GEmmini y Mermaid
+En esta actividad logré poderver como es que se supone que debo hacer este proyecto que tanto deseo realizar, la use para estructural y generar los diagramas con base a mis notas y vision, esto con la finalidad de poder comprender como es que se debe hacer, use Gemmini y Mermaid
