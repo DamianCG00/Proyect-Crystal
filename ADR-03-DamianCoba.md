@@ -81,4 +81,22 @@ Complejidad en la depuración (Debugging), ya que el flujo de ejecución no es l
 
 Un boceto de cómo se estructura tu sistema (draw.io, Mermaid o a mano escaneado)
 
-![Diagrama del sistema]( ./ruta/diagrama-nivel-1.png )
+
+
+
+
+--- 
+## Clausula de Uso de IA
+Este documento fue redactado de forma personal. Se utilizó inteligencia artificial como herramienta de apoyo en los siguientes aspectos específicos:
+
+| Área de uso | Descripción |
+| --- | --- |
+| **Validación de Alternativas** | Se consultó la IA para contrastar formalmente los beneficios del desacoplamiento temporal de la arquitectura dirigida a eventos frente al flujo síncrono de Clean Architecture, validando las restricciones de mi proyecto. |
+| **Sintaxis de Diagrama** | Se utilizó la IA para generar la estructura limpia y compacta del flujo en formato Mermaid para su correcto renderizado en GitHub. |
+
+*Nota: El análisis contextual, los sacrificios asumidos y la adaptación del estilo a los componentes específicos de Crystal (Kalopsia/Paladin) son de mi autoría.*
+
+
+
+
+
