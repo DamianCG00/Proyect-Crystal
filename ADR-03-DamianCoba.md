@@ -71,15 +71,14 @@ El sistema se organiza bajo una dinámica de productores y consumidores independ
 
 ---
 
-### Alternativas consideradas
-
-*(Mínimo 3 filas)*
+## Alternativas consideradas
 
 | Alternativa | Por qué la descarté |
-|-------------|---------------------|
-| ...         | ...                 |
-| ...         | ...                 |
-| ...         | ...                 |
+| --- | --- |
+| **Arquitectura en Capas / Clean Architecture (Propuesta tradicional)** | Se descartó porque Crystal no es un sistema CRUD financiero lineal. Separar el código en Domain, Application e Infrastructure añade capas de abstracción innecesarias para un software reactivo que responde directamente a estímulos asíncronos del hardware y de la red. |
+| **Monolito Secuencial Síncrono (Llamadas directas)** | Implicaría que Kalopsia llamara directamente a las funciones de Paladin al detectar un ataque. Fue descartada porque congelaría los hilos de red; mientras el firewall aplica el bloqueo, el sistema dejaría de escuchar, abriendo una ventana de vulnerabilidad. |
+| **Arquitectura de Microservicios (Contenedores)** | Separar el Honeypot, el IPS y la GUI en servicios independientes (ej. Docker). Se descartó porque rompería el requisito de portabilidad comercial. Exigir la instalación previa de Docker en un entorno host Windows corporativo añade una complejidad operativa inaceptable. |
+| **Arquitectura Hexagonal completa (Ports & Adapters)** | Ofrece un gran aislamiento del núcleo de seguridad, pero requiere definir puertos de entrada y salida explícitos para cada componente. Para el alcance y tiempo de desarrollo de mi MVP, esto representa sobreingeniería. |
 
 ---
 
