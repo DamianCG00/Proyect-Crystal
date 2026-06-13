@@ -3,7 +3,7 @@
 | Campo  | Valor |
 |--------|-------|
 | Autor  | Marco Damián |
-| Fecha  | 15/05/2026 |
+| Fecha  | 12/06/2026 |
 | Estado | `Aprobada` |
 
 ---
