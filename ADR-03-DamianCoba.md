@@ -81,6 +81,7 @@ Complejidad en la depuración (Debugging), ya que el flujo de ejecución no es l
 
 Un boceto de cómo se estructura tu sistema (draw.io, Mermaid o a mano escaneado)
 
+<img width="1084" height="229" alt="image" src="https://github.com/user-attachments/assets/cd7f577e-d2c8-47dd-b737-43c2606f1c0a" />
 
 
 
