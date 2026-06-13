@@ -60,18 +60,23 @@ El sistema se organiza bajo una dinámica de productores y consumidores independ
 
 ## Consecuencias
 
-** Lo que gano:**
+### Lo que gano:
 
-Menciona al menos:
-- Se vuelve más fácil de construir, mantener o escalar en tu sistema
-- Cómo afecta la forma en que vas a trabajar
+Procesamiento de amenazas asíncrono y altamente tolerante a ráfagas de ataques concurrentes
 
-**Lo que sacrifico o asumo:**
+Aislamiento total entre la detección (Honeypot/FIM), la mitigación (IPS) y la capa visual (GUI)
 
-Menciona al menos:
-- Una **limitación técnica** — qué no podrás hacer fácilmente con esta decisión
-- Una **deuda o riesgo** — qué podrías tener que resolver más adelante si el proyecto crece
+Escalabilidad simplificada: puedo añadir un nuevo consumidor de eventos (como un módulo de alerta por correo) simplemente haciéndolo leer la tabla de PostgreSQL, sin tocar el código de Kalopsia
 
+ ### Lo que sacrifico o asumo:
+
+Consistencia eventual: Existe una latencia entre el momento en que se inserta el evento de ataque y el instante en que Paladin ejecuta el bloqueo en el firewall
+
+Complejidad en la depuración (Debugging), ya que el flujo de ejecución no es lineal y requiere auditar los timestamps guardados en la base de datos
+
+
+
+---
 ## Diagrama
 
 Un boceto de cómo se estructura tu sistema (draw.io, Mermaid o a mano escaneado)
