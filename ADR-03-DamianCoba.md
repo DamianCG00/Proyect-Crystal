@@ -10,7 +10,17 @@
 
 ## Contexto
 
-¿Qué estás construyendo, qué problema resuelve y para quién es? Describe también las condiciones o restricciones que influyeron en esta decisión — por ejemplo, el tiempo disponible, el equipo, las tecnologías que ya conoces o las que viste en clase.
+
+En el ADR-02 se definió la transición de mi ecosistema **Crystal** hacia un modelo con almacenamiento relacional en PostgreSQL, gestionado en IntelliJ IDEA, permitiendo que los hilos de monitoreo escriban y consulten de forma concurrente.
+
+Tras avanzar en el desarrollo, detecté la necesidad de formalizar el estilo arquitectónico del sistema, yendo más allá de la simple separación por hilos. El objetivo es definir cómo interactúan mis componentes de red y seguridad (Kalopsia y Paladin) con la base de datos y la interfaz gráfica, asegurando que el procesamiento masivo de alertas no congele la aplicación ni dismnuya el rendimiento del sistema operativo de Windows
+
+Restricciones que se mantienen del ADR-02:
+
+* **Concurrencia de datos:** Lecturas y escrituras simultáneas en tiempo real (IoCs de red y hashes FIM).
+* **Tecnología:** Python, CustomTkinter, pgAdmin y PostgreSQL (sin cambios).
+* **Portabilidad comercial:** El sistema completo debe ser capaz de empaquetarse en un único archivo ejecutable (`.exe`) para entornos corporativos Windows.
+
 
 ---
 
