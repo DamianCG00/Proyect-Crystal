@@ -5,3 +5,4 @@
 /.vs
 /Crystal.Api/.vs/Crystal.Api.slnx
 /Crystal.Api/obj
+/Crystal.Api/bin/Debug/net10.0
