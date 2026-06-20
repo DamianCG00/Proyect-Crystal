@@ -5,7 +5,6 @@
 | Autor | Damian Coba G. |
 | Fecha | 19/06/2026 |
 | Estado | `Aceptado` |
-
 ---
 
 ## Contexto
@@ -34,12 +33,12 @@ Python permite un *Rapid Prototyping* (prototipado rápido). La característica 
 
 ## Consecuencias
 
-**✅ Lo que gano:**
+** Lo que gano:**
 
 - **Técnica:** Se vuelve sumamente fácil y rápido construir el manejo de sockets de red y la conexión a la base de datos con pocas líneas de código.
 - **Proceso:** Acelera drásticamente la capacidad de iteración y pruebas del MVP por parte del equipo, permitiendo cumplir con la entrega a tiempo.
 
-**⚠️ Lo que sacrifico o asumo:**
+** Lo que sacrifico o asumo:**
 
 - **Limitación técnica:** El *Global Interpreter Lock* (GIL) de Python impide un paralelismo real multi-núcleo en CPU, aunque para las tareas limitadas por I/O (red y base de datos) de este MVP es suficiente.
 - **Deuda o riesgo:** Tendré que gestionar la instalación manual de dependencias (`pip install`) en los equipos host antes de poder empaquetar el sistema en un ejecutable `.exe` final.
