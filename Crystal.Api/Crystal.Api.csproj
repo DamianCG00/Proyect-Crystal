@@ -1,10 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Core\**" />
+    <Compile Remove="Database\**" />
+    <Compile Remove="GUI\**" />
+    <Content Remove="Core\**" />
+    <Content Remove="Database\**" />
+    <Content Remove="GUI\**" />
+    <EmbeddedResource Remove="Core\**" />
+    <EmbeddedResource Remove="Database\**" />
+    <EmbeddedResource Remove="GUI\**" />
+    <None Remove="Core\**" />
+    <None Remove="Database\**" />
+    <None Remove="GUI\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
