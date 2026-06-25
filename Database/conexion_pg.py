@@ -5,5 +5,5 @@ def obtener_conexion():
         host="localhost",
         database="crystal_db", 
         user="postgres",
-        password="contrasena"
+        password="OrgBE11SqL34O#7"
     )
