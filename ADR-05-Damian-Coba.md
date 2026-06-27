@@ -4,7 +4,7 @@
 |---|---|
 | Autor | Damian Coba G. |
 | Fecha | 19/06/2026 |
-| Estado | `Aceptado` |
+| Estado | `Reemplazado por ADR 6` |
 ---
 
 ## Contexto
