@@ -11,20 +11,18 @@ def iniciar_honeypot(gui):
     while True:
         conn, addr = server.accept()
         ip = addr[0]
-        
         gui.log_kalopsia(f"Intrusión detectada desde: {ip}")
         try:
             conexion = obtener_conexion()
             cursor = conexion.cursor()
-            cursor.execute("INSERT INTO eventos_amenaza (ip_atacante, tipo_ataque) VALUES (%s, %s)", (ip, "Escaneo de Puerto 8080"))
+            
+            cursor.execute("INSERT INTO eventos_amenaza (ip_atacante, tipo_ataque, estado_bloqueo) VALUES (%s, %s, %s)", (ip, "Escaneo 8080", False))
             conexion.commit()
             cursor.close()
-
         except Exception as e:
             gui.log_kalopsia(f"Error BD Kalopsia: {e}")
         conn.close()
 
 def arrancar_en_hilo(gui): 
-    
     hilo = threading.Thread(target=iniciar_honeypot, args=(gui,), daemon=True)
     hilo.start()
