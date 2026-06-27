@@ -1,5 +1,5 @@
-import time
 import os
+import time
 from abc import ABC, abstractmethod
 from Database.conexion_pg import obtener_conexion
 
@@ -28,21 +28,19 @@ class EjecutorIPS:
 
 
 # --- 2. MOTOR PRINCIPAL DE PALADIN ---
-def iniciar_ips():
+def iniciar_ips(gui): 
     print("[Paladin] Motor de Prevención de Intrusiones iniciado.")
-    
+   
     
     conexion = obtener_conexion()
-    
-   
     motor_defensa = EjecutorIPS(BloqueoWindows())
 
     while True:
         try:
             cursor = conexion.cursor()
             
-
-            cursor.execute("SELECT id, ip_origen FROM eventos WHERE bloqueado = False")
+            
+            cursor.execute("SELECT id, ip_atacante FROM eventos_amenaza WHERE estado_bloqueo = False")
             amenazas = cursor.fetchall()
 
             for amenaza in amenazas:
@@ -51,7 +49,10 @@ def iniciar_ips():
 
                 motor_defensa.mitigar(ip_atacante)
 
-                cursor.execute("UPDATE eventos SET bloqueado = True WHERE id = %s", (id_evento,))
+                gui.log_paladin(f"> Bloqueo simulado exitosamente: {ip_atacante}")
+
+                
+                cursor.execute("UPDATE eventos_amenaza SET estado_bloqueo = True WHERE id = %s", (id_evento,))
                 conexion.commit()
 
             cursor.close()
