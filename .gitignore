@@ -7,3 +7,6 @@
 /Crystal.Api/obj
 /Crystal.Api/bin/Debug/net10.0
 /Crystal.Api/.vs/ProjectEvaluation
+
+__pycache__/
+*.pyc
