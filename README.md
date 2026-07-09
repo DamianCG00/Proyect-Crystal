@@ -34,3 +34,12 @@ Para inicializar el ecosistema Crystal (levantar sensores, habilitar actuadores 
 
 ```bash
 iniciar_Crystal.bat
+
+
+---
+
+## 🗺️ Documentación de Arquitectura (Modelo C4)
+
+La arquitectura completa de este ecosistema, detallada en sus niveles de Contexto, Contenedores y Componentes, ha sido documentada visualmente mediante diagramas renderizados como código.
+
+[🔗 Ver Documentación C4 del Ecosistema Crystal](doc/c4-crystal.md)
