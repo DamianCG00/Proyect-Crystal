@@ -34,3 +34,37 @@ graph TD
 ```
 
 ---
+
+
+## C4 Nivel 3 - Componentes
+**Para quién es:** Para los desarrolladores encargados del mantenimiento, blindaje y mejora del código.
+**Qué pregunta responde:** ¿Qué hay dentro de las piezas principales de Crystal y cómo se implementan los patrones de diseño y las medidas de seguridad internas?
+
+```mermaid
+graph TD
+    %% Módulo Sensor Kalopsia
+    subgraph Kalopsia [Módulo Sensor: Kalopsia]
+        Honeypot[Honeypot Server] --> Logger[Servicio de Logging Seguro]
+        Logger -->|Envía alerta vía HTTP POST| ApiCtrl[AlertasController]
+    end
+    
+    %% API y Lógica de Negocio
+    subgraph Crystal_API [Crystal API - ASP.NET Core]
+        ApiCtrl --> SecService[Servicio de Análisis de Ciberseguridad]
+        
+        %% Patrones y Blindaje
+        SecService -->|Patrón Strategy| Mitigacion[Estrategias de Mitigación]
+        SecService -->|Blindaje y Validación| Validador[Módulo de Validación de Entrada]
+    end
+    
+    %% Módulo Actuador Paladín y Base de Datos
+    subgraph Core_Backend [Infraestructura y Actuadores]
+        Mitigacion -->|Ejecuta comandos| Bloqueador[Paladín: IPS Blocker]
+        Validador -->|Transacciones Seguras| PgConnection[conexion_pg.py: Singleton]
+    end
+```
+
+---
+
+## Declaración de Uso de IA
+Esta documentación ha sido elaborada de manera autónoma, basando la estructura arquitectónica y el diseño de componentes íntegramente en el código fuente de mi autoría (Ecosistema Crystal). Se empleó asistencia de inteligencia artificial (Gemini) de manera exclusiva para la generación técnica de la sintaxis y el renderizado gráfico de los diagramas Mermaid presentados en este documento.
