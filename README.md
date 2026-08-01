@@ -2,7 +2,7 @@
 **Arquitectura de Software - Actividad #40: Documentación final y demo**
 
 ##  Demo en Vivo y Pipeline CI
-* **Demo funcional (Video):** [COLOCA_TU_LINK_DE_YOUTUBE_AQUI]
+* **Demo funcional (Video):** [https://drive.google.com/file/d/1sjfeJDrBFRwm_O3jThgAXx2J969xCblO/view?usp=sharing]
 * **Pipeline CI:** Implementado en GitHub Actions (Ver historial de commits / Actions). Se integró exitosamente validación y pruebas automatizadas (xUnit) sobre la API .NET.
 
 ---
