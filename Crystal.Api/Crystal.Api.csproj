@@ -8,15 +8,23 @@
 
   <ItemGroup>
     <Compile Remove="Core\**" />
+    <Compile Remove="Crystal.Api\**" />
+    <Compile Remove="Crystal.Tests\**" />
     <Compile Remove="Database\**" />
     <Compile Remove="GUI\**" />
     <Content Remove="Core\**" />
+    <Content Remove="Crystal.Api\**" />
+    <Content Remove="Crystal.Tests\**" />
     <Content Remove="Database\**" />
     <Content Remove="GUI\**" />
     <EmbeddedResource Remove="Core\**" />
+    <EmbeddedResource Remove="Crystal.Api\**" />
+    <EmbeddedResource Remove="Crystal.Tests\**" />
     <EmbeddedResource Remove="Database\**" />
     <EmbeddedResource Remove="GUI\**" />
     <None Remove="Core\**" />
+    <None Remove="Crystal.Api\**" />
+    <None Remove="Crystal.Tests\**" />
     <None Remove="Database\**" />
     <None Remove="GUI\**" />
   </ItemGroup>
