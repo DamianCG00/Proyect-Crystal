@@ -9,7 +9,8 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-   
+    
+    # Esto le dice a GitHub que los comandos se ejecuten dentro de la carpeta de tu API
     defaults:
       run:
         working-directory: ./Crystal.Api
